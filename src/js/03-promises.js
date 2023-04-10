@@ -37,7 +37,7 @@ form.addEventListener('submit', (event) => {
 
   for (let i = 0; i < amount; i++) {
     const position = i + 1;
-    const delay = ++ 1 * step;
+    const delay = delay + 1 * step;
 
     createPromise(position, promiseDelay)
       .then(({ position, delay }) => {
