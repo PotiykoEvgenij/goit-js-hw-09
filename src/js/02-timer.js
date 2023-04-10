@@ -27,10 +27,6 @@ const datePicker = flatpickr(datetimePicker, {
     const selectedDate = selectedDates[0];
     if (selectedDate.getTime() < Date.now()) {
         Notiflix.Notify.warning('Please choose a date in the future');
-    //     Notiflix.Notify.warning({
-    //     message: 'Please choose a date in the future',
-    //     position: 'center-top',
-    // });
       startBtn .disabled = true;
     } else {
       startBtn .disabled = false;
