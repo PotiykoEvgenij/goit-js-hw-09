@@ -48,7 +48,7 @@ form.addEventListener('submit', (event) => {
   //     })
   // }
   for (let i = 0; i < amount; i++)  {
-    createPromise(i + 1, delay + i * step)
+    createPromise((i + 1), (delay + i * step))
     .then(({ position, delay }) => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
