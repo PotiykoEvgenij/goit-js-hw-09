@@ -20,7 +20,7 @@ function createPromise(position, delay) {
       } else {
         reject({position, delay})
       }
-    }, promiseDelay);
+    }, delay);
   });
 };
 
