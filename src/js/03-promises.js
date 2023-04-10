@@ -35,12 +35,21 @@ form.addEventListener('submit', (event) => {
   const step = Number(stepInput.value);
   const amount = Number(amountInput.value);
 
-  for (let i = 0; i < amount; i++) {
-    const position = i + 1;
-    const delay = delay + 1 * step;
+  // for (let i = 0; i < amount; i++) {
+  //   const position = i + 1;
+  //   const delay = delay + 1 * step;
 
-    createPromise(position, promiseDelay)
-      .then(({ position, delay }) => {
+  //   createPromise(position, promiseDelay)
+  //     .then(({ position, delay }) => {
+  //     Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  //     })
+  //     .catch(({ position, delay }) => {
+  //       Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+  //     })
+  // }
+  for (let i = 0; i < amount; i++)  {
+    createPromise(i + 1, delay + i * step)
+    .then(({ position, delay }) => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
