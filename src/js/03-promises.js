@@ -1,7 +1,7 @@
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
-  position: 'center-top',
+  position: 'right-top',
   distance: '10px',
   borderRadius: '5px',
   width: '300px',
@@ -37,7 +37,7 @@ form.addEventListener('submit', (event) => {
 
   for (let i = 0; i < amount; i++) {
     const position = i + 1;
-    const promiseDelay = delay + 1 * step;
+    const delay = ++ 1 * step;
 
     createPromise(position, promiseDelay)
       .then(({ position, delay }) => {
